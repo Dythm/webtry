@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | CHEINSA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="internal-page">
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/cheinsa-logO.jpg" alt="logo"></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html"class="active-link">Contacto</a></li>
+        </ul>
+        <div class="burger">
+            <div></div><div></div><div></div>
+        </div>
+    </nav>
+
+    <header class="page-header header-spacing">
+    <div class="container">
+        <h1>Contacto Directo</h1>
+        <p>Estamos listos para atender sus requerimientos técnicos en todo el territorio nacional.</p>
+    </div>
+</header>
+
+<section class="contact-top section">
+    <div class="container">
+        <div class="grid-2">
+            <div class="contact-info">
+                <span class="tag">UBICACIÓN</span>
+                <h2>Nuestra Sede Operativa</h2>
+                
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Dirección</h4>
+                        <p>Av. Intercomunal, Sector Las Morochas, Ciudad Ojeda, Edo. Zulia, Venezuela.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Teléfonos</h4>
+                        <p>+58 (305) 890-1176</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>chenbach4@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15705.41443567794!2d-71.3142289!3d10.2330545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89f8d984c34d31%3A0x2f695941b5edce8e!2sCiudad%20Ojeda%2C%20Zulia!5e0!3m2!1ses!2sve!4v1700000000000" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-form-section bg-light section">
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="text-center mb-40">
+                <span class="tag">ESCRÍBENOS</span>
+                <h2>Solicite mas información</h2>
+                <p>Complete el formulario y un especialista técnico se pondrá en contacto con usted.</p>
+            </div>
+
+            <form action="https://formspree.io/f/xgoleaay" method="POST" class="main-form">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" name="email" placeholder="correo@empresa.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Teléfono</label>
+                        <input type="tel" name="telefono" placeholder="+58 414 000 0000">
+                    </div>
+                    <div class="input-group">
+                        <label>Asunto / Servicio</label>
+                        <select name="servicio">
+                            <option value="civil">Obras Civiles</option>
+                            <option value="industrial">Mantenimiento Industrial</option>
+                            <option value="petrolero">Servicios Petroleros</option>
+                            <option value="otros">Otros Requerimientos</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label>Mensaje Detallado</label>
+                    <textarea name="mensaje" rows="5" placeholder="Describa brevemente su proyecto o necesidad técnica..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Enviar Requerimiento <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <footer class="main-footer internal-page reveal">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <div class="logo">
+                <img src="img/CHEINSA LOGO-BLANCO.png" alt="logo blanco">
+            </div>
+            <p>Servicios Industriales y Civiles CHEINSA, C.A. es una empresa fundada en 1994, orientada al cumplimiento, la calidad y la satisfacción del cliente.</p>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contacto</h3>
+            <ul>
+                <li><i class="fas fa-phone"></i> +58 (305) 890-1176</li>
+                <li><i class="fas fa-envelope"></i> chenbach4@gmail.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Zulia, Venezuela</li>
+            </ul>
+        </div>
+
+        <!-- <div class="footer-social">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div> -->
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 CHEINSA - Soluciones integrales en servicios industriales, civiles y petroleros.</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
