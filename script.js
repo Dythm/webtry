@@ -117,6 +117,8 @@ const startSlider = () => {
 // --- 6. INICIALIZACIÓN GENERAL ---
 document.addEventListener("DOMContentLoaded", () => {
     // Ejecutar Reveal al cargar para mostrar lo que ya está en pantalla
+    initBurgerMenu();
+    highlightActiveLink()
     reveal();
 
     // Cargar Navbar y Footer si tienes los placeholders
