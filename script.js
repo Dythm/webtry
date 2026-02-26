@@ -175,3 +175,36 @@ window.closeLightbox = () => {
         document.body.style.overflow = 'auto';
     }
 };
+
+// Manejo del estado de envío en el formulario de empleo
+document.addEventListener("DOMContentLoaded", () => {
+    const jobForm = document.querySelector('.main-form');
+    const submitBtn = document.querySelector('#submit-btn');
+
+    if (jobForm && submitBtn) {
+        jobForm.addEventListener('submit', function() {
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnIcon = submitBtn.querySelector('.btn-icon');
+            const btnLoader = submitBtn.querySelector('.btn-loader');
+
+            // Cambiar estado del botón
+            submitBtn.classList.add('loading');
+            btnText.textContent = "ENVIANDO...";
+            btnLoader.style.display = "inline-block";
+            
+            // El formulario seguirá su curso natural hacia Web3Forms
+        });
+    }
+});
+const moveSlider = (index) => {
+    // Usamos backticks para asegurar que el cálculo sea exacto
+    slider.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(d => d.classList.remove('active'));
+    if (dots[index]) dots[index].classList.add('active');
+    currentSlide = index;
+};
+window.addEventListener('resize', () => {
+    // Esto resetea la posición del slider al redimensionar la pantalla
+    const slider = document.querySelector('.slider');
+    if(slider) slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+});

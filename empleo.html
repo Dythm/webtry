@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabaja con Nosotros | CHEINSA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="internal-page">
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/cheinsa-logO.jpg" alt="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="burger">
+            <div></div><div></div><div></div>
+        </div>
+    </nav>
+
+    <header class="page-header header-spacing">
+        <div class="container">
+            <h1>Trabaja con Nosotros</h1>
+            <p>Únete a una empresa líder en servicios industriales y petroleros.</p>
+        </div>
+    </header>
+
+    <section class="contact-form-section bg-light section reveal">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="text-center mb-40">
+                    <span class="tag">RRHH</span>
+                    <h2>Postulación</h2>
+                    <p>Cargue su información profesional y nos comunicaremos con usted lo más pronto posible</p>
+                </div>
+
+               <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="main-form">
+                    <input type="hidden" name="access_key" value="8d14ce8c-0ce5-4411-96ce-8a31615be276">
+                    <input type="hidden" name="subject" value="Nueva Postulación de Empleo - CHEINSA">
+                    <input type="hidden" name="from_name" value="Portal de Empleo CHEINSA">
+
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>Nombres y Apellidos *</label>
+                            <input type="text" name="nombre_completo" placeholder="Ej. Pedro José Pérez" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Cédula de Identidad *</label>
+                            <input type="text" name="cedula" placeholder="V-00.000.000" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Fecha de Nacimiento *</label>
+                            <input type="date" name="fecha_nacimiento" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Estado Civil *</label>
+                            <select name="estado_civil" required>
+                                <option value="" disabled selected>Seleccione...</option>
+                                <option value="Soltero/a">Soltero/a</option>
+                                <option value="Casado/a">Casado/a</option>
+                                <option value="Divorciado/a">Divorciado/a</option>
+                                <option value="Viudo/a">Viudo/a</option>
+                                <option value="Concubinato">Concubinato</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Sexo *</label>
+                            <select name="sexo" required>
+                                <option value="" disabled selected>Seleccione...</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Mano Dominante *</label>
+                            <select name="mano_dominante" required>
+                                <option value="" disabled selected>Seleccione...</option>
+                                <option value="Derecho">Derecho</option>
+                                <option value="Izquierdo">Izquierdo</option>
+                                <option value="Ambidiestro">Ambidiestro</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Sabe nadar? *</label>
+                            <select name="mano_dominante" required>
+                                <option value="" disabled selected>Seleccione...</option>
+                                <option value="Derecho">Si</option>
+                                <option value="Izquierdo">No</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Correo Electrónico *</label>
+                            <input type="email" name="email" placeholder="ejemplo@correo.com" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Teléfono de Contacto *</label>
+                            <input type="tel" name="telefono" placeholder="0412-0000000" required>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <label>Dirección de Habitación *</label>
+                            <input type="text" name="direccion" placeholder="Estado, Ciudad, Sector, Calle/Casa" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Nivel de Instrucción *</label>
+                            <select name="nivel_estudios" required>
+                                <option value="" disabled selected>Seleccione nivel...</option>
+                                <option value="Primaria">Primaria</option>
+                                <option value="Bachiller">Bachiller</option>
+                                <option value="Tecnico Medio">Técnico Medio</option>
+                                <option value="Tecnico Superior">Técnico Superior (TSU)</option>
+                                <option value="Universitario">Universitario</option>
+                                <option value="Postgrado">Postgrado / Maestría</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Cargo al que aspira *</label>
+                            <input type="text" name="cargo_aspirado" placeholder="Ej. Soldador, Ing. Residente" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Años de Experiencia Laboral *</label>
+                            <input type="number" name="años_experiencia" min="0" placeholder="Ej. 5" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Cargas Familiares (Hijos) *</label>
+                            <input type="number" name="hijos" min="0" placeholder="0" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>¿Disponibilidad para Viajar? *</label>
+                            <select name="disponibilidad_viaje" required>
+                                <option value="" disabled selected>Seleccione...</option>
+                                <option value="Si">Sí</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>¿Posee Licencia de Conducir? *</label>
+                            <select name="licencia" required>
+                                <option value="" disabled selected>Seleccione...</option>
+                                <option value="Si">Sí</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Resumen de Perfil Profesional / Comentarios Adicionales</label>
+                        <textarea name="resumen_profesional" rows="4" placeholder="Describa brevemente sus habilidades técnicas..."></textarea>
+                    </div>
+
+                    <div class="input-group custom-file-upload">
+                        <label>Adjuntar Síntesis Curricular (PDF) *</label>
+                        <input type="file" name="attachment" accept=".pdf" required>
+                        <small>Formato PDF. Máximo 5MB.</small>
+                    </div>
+
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div class="form-actions">
+                        <button type="submit" id="submit-btn" class="btn-submit">
+                            <span class="btn-text">ENVIAR MI POSTULACIÓN</span>
+                            <i class="fas fa-paper-plane btn-icon"></i>
+                            <i class="fas fa-spinner fa-spin btn-loader" style="display: none;"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer internal-page reveal">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <div class="logo">
+                <img src="img/CHEINSA LOGO-BLANCO.png" alt="logo blanco">
+            </div>
+            <p>Servicios Industriales y Civiles CHEINSA, C.A. es una empresa fundada en 1994, orientada al cumplimiento, la calidad y la satisfacción del cliente.</p>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contacto</h3>
+            <ul>
+                <li><i class="fa-brands fa-whatsapp"></i> +1 (305) 890-1176</li>
+                <li><i class="fas fa-envelope"></i> chenbach4@gmail.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Calle campo Elias, entre calle los Díaz y calle Santa Rita, Casa la Lupe, Ciudad Ojeda, Zulia, Venezuela</li>
+            </ul>
+        </div>
+
+        <div class="footer-social">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/cheinsa85/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 CHEINSA - Soluciones integrales en servicios industriales, civiles y petroleros.</p>
+    </div>
+</footer>
+    <button id="backToTop" class="back-to-top" title="Ir al inicio">
+    <i class="fas fa-chevron-up"></i>
+</button>
+    <script src="script.js"></script>
+</body>
+</html>

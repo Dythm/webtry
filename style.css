@@ -901,6 +901,79 @@ footer a:hover { color: var(--primary-color) !important; }
     color: #888;
 }
 
+input[type="date"] {
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: uppercase; 
+    color: #444;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+@media (max-width: 968px) {
+    .full-width { grid-column: span 1; }
+}
+
+/* Centrar el contenedor del botón */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Ajuste al botón para que no se estire y se centre */
+.btn-submit {
+    margin: 0 auto;
+    padding: 15px 50px; /* Un poco más ancho para que destaque */
+    display: inline-flex; /* Para que el icono y el texto sigan alineados */
+    justify-content: center;
+    align-items: center;
+    min-width: 250px; /* Tamaño mínimo profesional */
+}
+
+/* Clase de utilidad para el ancho completo en el grid */
+.full-width {
+    grid-column: 1 / -1; /* Ocupa todas las columnas disponibles */
+}
+
+@media (max-width: 968px) {
+    .full-width {
+        grid-column: 1;
+    }
+}
+
+/*form */
+/* Estilo para el estado de carga */
+.btn-submit.loading {
+    background-color: var(--secondary-color); /* Color más oscuro al enviar */
+    pointer-events: none; /* Evita doble clic */
+    opacity: 0.8;
+}
+
+.btn-submit.loading .btn-text {
+    margin-right: 10px;
+}
+
+.btn-submit.loading .btn-icon {
+    display: none; /* Escondemos el avioncito */
+}
+
+.btn-submit .btn-loader {
+    font-size: 1.2rem;
+}
+
+/* Animación de rotación para el spinner */
+.fa-spin {
+    animation: fa-spin 1s infinite linear;
+}
+
+@keyframes fa-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(359deg); }
+}
+
 /* ==========================================================================
    10. UTILIDADES JS (Scroll Reveal)
    ========================================================================== */
@@ -912,6 +985,45 @@ footer a:hover { color: var(--primary-color) !important; }
 
 .reveal.active {
     opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos Botón Ir Arriba */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    transition: all 0.3s ease;
+    
+    /* Oculto por defecto */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Clase activa que activaremos con JS */
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
     transform: translateY(0);
 }
 
@@ -1000,4 +1112,248 @@ footer a:hover { color: var(--primary-color) !important; }
     .intro-experience {
         min-height: 300px;
     }
+}
+
+/* ==========================================================================
+   OPTIMIZACIÓN RESPONSIVE GLOBAL (AÑADIR AL FINAL)
+   ========================================================================== */
+
+@media (max-width: 968px) {
+    /* 1. Reset de Imágenes fijas */
+    .service-img, 
+    .service-imgl, 
+    .value-img img, 
+    .history-img img,
+    .project-img {
+        width: 100% !important;
+        height: auto !important; /* Permitimos que la imagen dicte su altura */
+        min-height: 250px;
+        max-height: 400px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .service-img img, 
+    .service-imgl img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* 2. Ajuste de Contenedores y Secciones */
+    .section, 
+    .intro-home, 
+    .about-split, 
+    .quality-policy-new {
+        padding: 40px 0; /* Reducimos padding en móvil */
+    }
+
+    .container {
+        width: 92%;
+        padding: 0 10px;
+    }
+
+    /* 3. Forzar Grids a 1 Columna (Asegura que nada se amontone) */
+    .grid-2, 
+    .intro-flex, 
+    .machinery-grid, 
+    .policy-box-grid, 
+    .form-grid, 
+    .footer-grid,
+    .stats-grid,
+    .intro-home .container {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+
+    /* 4. Títulos y Textos */
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .policy-main-text {
+        font-size: 1.1rem;
+        padding-left: 15px;
+        margin: 20px 0;
+    }
+}
+
+/* Corrección Maestra para el Slider en Móvil */
+.hero-container {
+    overflow: hidden; /* Vital: corta cualquier imagen que se quiera salir */
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    width: 100%; /* El JS se encargará del resto, pero aquí debe nacer en 100% */
+}
+
+.slide {
+    min-width: 100vw; /* Forzamos a que cada imagen ocupe TODO el ancho del móvil */
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el contenido verticalmente */
+    position: relative;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 100%; /* Evita que el contenedor sea más grande que la pantalla */
+    margin: 0 auto; /* Centra el bloque de texto */
+    padding: 0 20px;
+    text-align: center; /* Fuerza el texto al centro */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Fuerza botón y h1 al centro */
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        height: 70vh; /* Un poco más corto ayuda a que el contenido suba */
+        min-height: 450px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem !important;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Si el botón se va a la derecha es por un margen o padding heredado */
+    .hero-content .btn, .btn-pulse {
+        margin: 0 auto !important; /* Centrado absoluto */
+        padding: 12px 25px;
+        font-size: 0.9rem;
+        display: inline-block;
+        max-width: fit-content;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        min-width: 100% !important;
+    }
+
+    
+    .intro-btns {
+        width: 100%;
+        padding: 0 10px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%; 
+        text-align: center;
+    }
+}
+
+.navbar { transition: all 0.3s ease; }
+.navbar-scrolled {
+    background: #fff !important;
+    padding: 0.5rem 5% !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.hero-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    width: 100%; 
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slide {
+    min-width: 100%; 
+    width: 100%;
+    flex-shrink: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        width: 100%;
+        max-width: 100vw;
+        padding: 0 20px;
+        text-align: center;
+        margin: 0 auto; 
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero-content .btn {
+        display: inline-block;
+        margin: 0 auto;
+    }
+}
+
+/* Indicador visual en tarjetas */
+.project-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.info-hint {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #003366; /* Azul corporativo */
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.info-hint i {
+    font-size: 12px;
+    animation: bounceRight 2s infinite;
+}
+
+/* Ocultar cuando aparece la info */
+.project-card:hover .info-hint {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes bounceRight {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Mejora del overlay de info */
+.overlay-info h5 {
+    color: #ffcc00; /* Dorado para resaltar subtítulos */
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    display: inline-block;
 }
